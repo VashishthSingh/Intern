@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Angular Integration with servlet Admin</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+	
+	<style type="text/css">
+		*{margin: 0px;padding: 0px;box-sizing: border-box;}
+		.outerDiv{
+			width:100%;height: 80px;
+			background-color: white;text-align: center;
+			padding-top: 25px;
+  			box-shadow: 5px 3px 5px #888888;
+  			margin-bottom: 20px;
+  		}
+		.outerDiv a{text-decoration: none;margin: 15px;font-size: 20px;}
+		button{margin: 20px;}
+	</style>
+	
+</head>
+<body>
+	<div class="outerDiv">
+	
+	<a href="#!report1">Report</a>
+<!-- 	<a href="#!report">Report</a> -->
+	<a href="#!admin" ng-show="setDeciderForAdmin">Admin</a>
+<!-- 	<a href="#!addUser" ng-show="setDeciderForAdmin">Add User</a> -->
+<!-- 	<a href="#!addAdmin" ng-show="setDeciderForAdmin">Add Admin</a> -->
+	<a href="#!userManagement" ng-show="setDeciderForAdmin">User Management</a>
+	<a href="#!logOut">LogOut</a><br><br>
+	</div>
+	
+	<div class="container" style="background-color: white;">
+		<button class="btn btn-primary" id="getDataBtn" ng-click="startBtn()">START</button>
+		<button class="btn btn-danger" id="getDataBtn" ng-click="stopBtn()">STOP</button>
+	</div>
+		
+</body>
+</html>

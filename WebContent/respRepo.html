@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		th,tr{text-align: center;}
+	</style>
+</head>
+<body>
+
+	<mydirc1></mydirc1>
+	
+<!-- 	<select ng-model="selectedName" ng-options="x for x in names"></select> -->
+	<input type="text" id="getUrlLinkHere" placeholder="Enter URL here"/><br>
+	<input class="form-control" id="datetimepicker11" type="text" ng-blur="getResponseRangeAndData()" ng-model="startRange" placeholder="Select starting Date Time"/>
+	<br><input class="form-control" id="datetimepicker22" type="text" ng-blur="getResponseRangeAndData()" ng-model="endRange" placeholder="Select ending Date Time"/>
+    <br><button class="btn btn-primary" id="getDataBtn11" ng-click="clickMe1()">Get Data</button>
+
+	<table border="2" cellspaceing="2" class="table">
+		<tr>
+			<th>ReadDateAndTime</th>
+			<th>RespTime</th>
+		</tr>
+		<tr ng-repeat="objData in JSONData">
+			<td>{{objData.map.readingDateAndTime}}</td>
+			<td>{{objData.map.responseTime}}</td>
+		</tr>
+	</table>
+		
+	<canvas id="myChartRam" width="100%" height="50px"></canvas>
+	
+</body>
+</html>
